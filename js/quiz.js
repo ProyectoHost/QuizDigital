@@ -221,7 +221,7 @@ let questions = [
       },
       {
         id: 20,
-        question: "¿Cuaes la Serie más premiada de la historia de la televisión?",
+        question: "¿Cuales la Serie más premiada de la historia de la televisión?",
         answer: "Game of Thrones",
         options: [
           "House of the Dragon",
