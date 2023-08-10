@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Prueba Final</title>
+</head>
+<body>
+
+  <div class="loader_bg">
+    <div class="row">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  text-center ">
+        <h3 class="my-5">Desafía tus Conocimientos</h3>
+         
+         <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  text-center" >
+          <div class="d-flex justify-content-center align-items-center t-4">
+              <div class="spinner-border text-dark "
+                role="status" style="width: 3rem; height: 3rem;">
+              <span class="visually-hidden">Loading...</span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="container-fluid">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+      
+
+            <div class="col-8 p-4" style="background-color:rgb(231, 231, 231); border-radius: 15px 15px 15px 15px;" >
+           <form  class="col-12 myform" name="id" onsubmit="submitted(event)">
+                <h4 class="col-12 h4 text-center" >¿Estas Listo?</h4>
+
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nombre</label>
+                      <input type="text"  id="name" class="form-control " placeholder="" aria-describedby="helpId" maxlength="16" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122)) ">
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                           Reglas del Quiz
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p>1- Cada Respuesta correcta tendra un valor de (1pts), de lo contrario tendra un valor de (0pts) </p>
+                          
+                            <p>2- El Puntaje final se mostrara al finalizar la Prueba con su Nombre</p>
+
+                            <p>3- Si retrocede la paguina en plena Prueba se reiniciara su puntaje y la Prueba </p>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="d-grid gap-2 btn-sm my-2 mx-auto">
+                       <input id="cambio" class="fw-bold btn btn-primary" type="button" value="Comenzar"  style="border-radius: 15px 15px 15px 15px  ;" onclick="javascript:pagina();">
+                      </div>
+                     
+                    </form>
+        </div>
+
+</div>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/Animaciones.js"></script>
+<script src="js/jquery3.js"></script>
+ 
+<script>
+
+function pagina(){
+
+if ($('#name').val().length == 0) {
+ alert("El Campo Nombre esta Vacio");
+ return false;
+}else{
+  location.href="quiz.html";
+document.getElementById('cambio').type = 'submit';
+};
+
+
+}
+
+ function submitted(e){
+  e.preventDefault();
+
+  let namee = document.forms["id"]["name"].value;
+  sessionStorage.setItem("name", namee);
+
+
+ };
+</script>
+
+
+
+</body>
+</html>

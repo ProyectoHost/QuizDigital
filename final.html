@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/quiz-final.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Resultado Prueba</title>
+</head>
+<body>
+    <!--AWARD & POINTS-->
+    <div class="wrapper">
+        <div>
+            <i class="fas fa-award award_icon" style="margin: 10px 0px 0px 130px; color: gold;"></i>
+            <h1 class="username"><span class="name" style="font-size: 30px; color: rgb(255, 255, 255);"></span><br>Resultado</h1>
+            <p class="userpoints " style="font-size: 20px;">Tu Puntuacion : <span class="points" style="color: greenyellow;"></span></p>
+            <p id="mensaje" class="text-white text-center"></p>
+        </div>
+       
+    </div>
+
+    <script src="js/userinfo.js"></script>
+    <script>
+
+            var ele = document.getElementsByClassName("points")[0];
+            var va = parseInt(ele.innerHTML);
+
+            if (va === 20){
+                document.getElementById("mensaje").innerHTML = "{ Excelente Eres Digno tu Conocimiento }";
+            } else {
+                document.getElementById("mensaje").innerHTML = "{ Gracias Por su Participación, otro dia tendras Suerte }";  
+            }
+    </script>
+</body>
+</html>
