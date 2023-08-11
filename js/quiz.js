@@ -25,9 +25,9 @@ let questions = [
       {
         id: 3,
         question: "¿Cuál es el País con menos habitantes del Mundo?",
-        answer: "La Ciudad del Vaticano",
+        answer: "El Vaticano",
         options: [
-          "La Ciudad del Vaticano",
+          "El Vaticano",
           "China",
           "Portugal",
           "Ninguna de las anteriores"
@@ -82,7 +82,7 @@ let questions = [
         question: "¿Cual es el Álbum musical más vendido de la historia?",
         answer: "Thriller, de Michael Jackson",
         options: [
-          "Black in Black, de AD/DC",
+          "Black in Black, de AC/DC",
           "Thriller, de Michael Jackson",
           "Folklore, de Taylor Swift",
           "Led Zeppelin IV, de Led Zeppelin"
