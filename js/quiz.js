@@ -114,10 +114,10 @@ let questions = [
       {
         id: 11,
         question: "¿Cuántas notas musicales existen?",
-        answer: "Doce",
+        answer: "Siete",
         options: [
           "Trece",
-          "Doce",
+          "Siete",
           "Dos",
           "Cinco"
           
